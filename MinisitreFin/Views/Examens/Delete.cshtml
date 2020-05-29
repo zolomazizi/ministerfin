@@ -1,0 +1,163 @@
+﻿@model MinisitreFin.Models.Examens
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Examens</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.A)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.A)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.A_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.A_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.B)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.B)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.B_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.B_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.C)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.C)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.C_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.C_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.D)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.D)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.D_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.D_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.E)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.E)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.E_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.E_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.F)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.F)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.F_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.F_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.G)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.G)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.G_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.G_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.H)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.H)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.H_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.H_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.I)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.I)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.I_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.I_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.J)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.J)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.J_Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.J_Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Statut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Statut)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ordonnance_)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ordonnance_)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.Nom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.Nom)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

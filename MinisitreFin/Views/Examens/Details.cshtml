@@ -1,0 +1,173 @@
+﻿@model MinisitreFin.Models.Examens
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>
+        Examen de 
+        @Html.DisplayFor(model => model.Patient.Nom) @Html.DisplayFor(model => model.Patient.Prenom)
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            <div>-Q1 : Voyage ou dans une Zone à Risque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.A)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.A_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>-Q2- : Contact avec un malade confirmé : </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.B)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.B_Text)
+        </dd>
+
+        <hr />
+        <dd>
+            <div>-Q3 : Est-ce que vous toussez ?  </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.C)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.C_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>-Q4 : Ressentez-vous de la Fièvre ?  </div>
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.D)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_Text)
+        </dd>
+
+        <hr />
+        <dd>
+            <div>-Q5 : Céphalées et Migraines  </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.E)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.E_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>-Q6 : Souffrez-vous de diarrhée ou de Vomissements?  </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.F)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.F_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>-Q7 : Souffrez-vous de maladies chroniques ou de Co morbidité ?(Ex : Diabète, hypertension, Maladies cardio-vasculaires) ?  </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.G)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.G_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>-Q8 : Prenez vous des médicaments?  </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.H)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.H_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>- Q9 : Souffrez-vous d’une Conjonctivite ?  </div>
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.I)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.I_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>- Q10  : Eprouvez vous de la Fatigue?  </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.J)
+        </dd>
+        <dd>
+            <div>-Remarque </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.J_Text)
+        </dd>
+        <hr />
+        <dd>
+            <div>Statu </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Statut)
+        </dd>
+        <hr />
+        <dd>
+            <div>Ordonnance Médicale </div>
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.ordonnance_)
+        </dd>
+
+
+        <hr />
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")*@
+</p>

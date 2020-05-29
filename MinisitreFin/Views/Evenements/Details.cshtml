@@ -1,0 +1,68 @@
+﻿@model MinisitreFin.Models.Evenements
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+
+<h2>Détails</h2>
+@*#@Model.ID*@
+<div>
+    <h4>Evenement </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Titre d'evenemet
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titre_even)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Description)
+        </dd>
+
+
+
+        <dt>
+            Date Dubet
+        </dt>
+
+        <dd>
+            @Html.FormatValue("yyy-MM-dd", Model.Date_debut.Value.Date.ToString("yyy-MM-dd"))
+        </dd>
+
+        <dt>
+            Date Fin
+        </dt>
+
+        <dd>
+            @Html.FormatValue("yyy-MM-dd", Model.Date_fin.Value.Date.ToString("yyy-MM-dd"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Statut)
+        </dt>
+
+        <dd>
+            @if (Model.Statut.Value)
+            {
+                <h6>Active</h6>
+            }
+            else
+            {
+                <h6>Desactive</h6>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Retour à la liste", "Index")
+</p>

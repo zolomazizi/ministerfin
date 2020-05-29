@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f105ad2c0fcd483f9f9076d1c0741572" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="MinistreFinModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MinistreFinModel.Activites" Width="1.5" PointX="12" PointY="16.625" />
+        <EntityTypeShape EntityType="MinistreFinModel.Agenda" Width="1.5" PointX="9.75" PointY="17" />
+        <EntityTypeShape EntityType="MinistreFinModel.Agenda_Activites" Width="1.5" PointX="17.25" PointY="17.25" />
+        <EntityTypeShape EntityType="MinistreFinModel.Articles" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MinistreFinModel.AspNetRoles" Width="1.5" PointX="0.75" PointY="17.125" />
+        <EntityTypeShape EntityType="MinistreFinModel.AspNetUserClaims" Width="1.5" PointX="5.25" PointY="28.625" />
+        <EntityTypeShape EntityType="MinistreFinModel.AspNetUserLogins" Width="1.5" PointX="5.25" PointY="11" />
+        <EntityTypeShape EntityType="MinistreFinModel.AspNetUserRoles" Width="1.5" PointX="5.25" PointY="15.125" />
+        <EntityTypeShape EntityType="MinistreFinModel.AspNetUsers" Width="1.5" PointX="3" PointY="18.5" />
+        <EntityTypeShape EntityType="MinistreFinModel.compte_rendu" Width="1.5" PointX="14.25" PointY="16.75" />
+        <EntityTypeShape EntityType="MinistreFinModel.Evenement" Width="1.5" PointX="7.5" PointY="20.375" />
+        <EntityTypeShape EntityType="MinistreFinModel.Evenements" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MinistreFinModel.Examens" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="MinistreFinModel.groue_detail" Width="1.5" PointX="9.75" PointY="20.5" />
+        <EntityTypeShape EntityType="MinistreFinModel.Groupe_thematiqe" Width="1.5" PointX="7.5" PointY="16.875" />
+        <EntityTypeShape EntityType="MinistreFinModel.Initiatives" Width="1.5" PointX="7.5" PointY="23.625" />
+        <EntityTypeShape EntityType="MinistreFinModel.Membre_group" Width="1.5" PointX="12.75" PointY="20.75" />
+        <EntityTypeShape EntityType="MinistreFinModel.Patient" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="MinistreFinModel.Programme" Width="1.5" PointX="7.5" PointY="28.5" />
+        <EntityTypeShape EntityType="MinistreFinModel.Projet" Width="1.5" PointX="9.75" PointY="24.375" />
+        <EntityTypeShape EntityType="MinistreFinModel.Type_Activite" Width="1.5" PointX="9.75" PointY="14.375" />
+        <EntityTypeShape EntityType="MinistreFinModel.Utilisateur" Width="1.5" PointX="5.25" PointY="18.625" />
+        <AssociationConnector Association="MinistreFinModel.avoir" />
+        <AssociationConnector Association="MinistreFinModel.contient3" />
+        <AssociationConnector Association="MinistreFinModel.contientA" />
+        <AssociationConnector Association="MinistreFinModel.FKActivites519089" />
+        <AssociationConnector Association="MinistreFinModel.contient2" />
+        <AssociationConnector Association="MinistreFinModel.creer" />
+        <AssociationConnector Association="MinistreFinModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" />
+        <AssociationConnector Association="MinistreFinModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="MinistreFinModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="MinistreFinModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="MinistreFinModel.FK_FKUserId" />
+        <AssociationConnector Association="MinistreFinModel.FK_FKPatient" />
+        <AssociationConnector Association="MinistreFinModel.Class" />
+        <AssociationConnector Association="MinistreFinModel.FK_FKAddUserId" />
+        <AssociationConnector Association="MinistreFinModel.FK_admin" />
+        <AssociationConnector Association="MinistreFinModel.FK_FKGroupId" />
+        <AssociationConnector Association="MinistreFinModel.contient" />
+        <AssociationConnector Association="MinistreFinModel.creer6" />
+        <AssociationConnector Association="MinistreFinModel.FK_FKMembreId" />
+        <AssociationConnector Association="MinistreFinModel.creer2" />
+        <AssociationConnector Association="MinistreFinModel.RoleUser" />
+        <AssociationConnector Association="MinistreFinModel.Utilisateur_Evenement2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

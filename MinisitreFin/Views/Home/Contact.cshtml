@@ -1,0 +1,104 @@
+﻿
+@using PagedList.Mvc;
+@using PagedList;
+@model IPagedList<MinisitreFin.Models.Articles>
+@{
+    ViewBag.Title = "ArticlesPublic";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+    <p>Use this area to provide additional information.</p>
+    <p>Use hello word.</p>*@
+<div class="container">
+    <div class="row">
+        <h1>COVID-19 Alerte ?</h1><br /><br /><br />
+        <p>COVID-19 Alerte est l'application Marocain officielle développée pour soutenir les efforts nationaux de lutte contre COVID-19.</p>
+        <p>L'une des caractéristiques les plus importantes du virus Covid-19 est que lorsqu'une personne en est infectée, elle peut rester asymptomatique jusqu'à deux semaines. Pendant cette période, la personne est contagieuse pour son environnement, notamment avec la possibilité d'infection aléatoire. Ce processus est répété pour chaque personne affectée par le virus et il devient très difficile d'arrêter la propagation.</p>
+        <p>L'application COVID-19 Alerte offre une solution à cette problématique.</p>
+        <p>Une fois l'application téléchargée et installée, elle commence automatiquement à détecter et à stocker les interactions survenues, c'est-à-dire, à chaque fois qu'on se trouve dans un rayon de quelques mètres d'une autre personne possédant l'application, sans révéler l'identité de l'utilisateur dans le cadre du respect des données personnelles.</p>
+        <br /><br />
+
+        <h5>Pourquoi utiliser COVID-19 Alerte ?</h5><br />
+        <p>COVID-19 Alerte facilite le contact tracing des personnes qui ont été en contact avec une personne infectée (symptomatique ou asymptomatique).</p>
+        <p>COVID-19 Alerte contribue à économiser les ressources de l'État et rend la détection ainsi que la prise en charge des malades plus rapide.</p>
+        <p>Il est de notre devoir de nous protéger et de protéger notre environnement.</p><br /><br />
+        <h5>Où est ce qu'on peut trouver l'application COVID-19 Alerte ?</h5><br />
+        <p>L'application COVID-19 Alerte est présente sur Google Play Store et Apple App Store.</p><br /><br />
+        <h5>Comment configurer COVID-19 Alerte sur son smartphone ?</h5><br />
+        <p>Après avoir téléchargé et installé l'application COVID-19 Alerte du Store, vous procédez à la création de votre compte.</p>
+        <p>Cette opération nécessite uniquement votre numéro de téléphone.</p>
+        <p>Vous recevez ensuite un code de vérification pour confirmer votre numéro de téléphone.</p>
+        <p>Vous devez accepter les permissions demandées, activer le bluetooth, la localisation et laisser l'application active en arrière plan.</p><br /><br />
+        <h5>L'application COVID-19 Alerte doit-elle être au premier plan pour fonctionner? Puis-je utiliser d'autres applications en parallèle ?</h5><br />
+        <p>Il n'est pas nécessaire de garder l'application COVID-19 Alerte fonctionnelle au premier plan, il suffit juste de l'ouvrir, d'accepter les permissions, d'activer le GPS et la localisation et de continuer à utiliser votre smartphone normalement.</p>
+        <br /><br />
+        <h5>
+            Comment puis-je savoir si mon application fonctionne correctement ou pas?
+        </h5><br />
+        <p>L'application COVID-19 Alerte est fonctionnelle du moment que ce message est affiché sur l'écran: "L'application est fonctionnelle"</p><br /><br />
+
+        <h5>Combien de temps dois-je garder l'application en cours d'exécution ? Dois-je garder le GPS de mon téléphone activé tout le temps ?</h5><br />
+        <p>L'application COVID-19 Alerte devrait être ouverte et le GPS fonctionnel à chaque fois que vous sortez et vous vous déplacez dehors. Que vous soyez au travail, au marché, à l'école ou juste sorti faire une marche, COVID-19 Alerte enregistrera les interconnexions survenues et synchronise ces informations avec le serveur une fois la connexion internet est disponible.</p>
+        <br /><br />
+              <h5>Est-ce que garder COVID-19 Alerte en fonctionnement tout le temps épuiserait ma batterie rapidement ?</h5><br />
+                                                                                                                            <p>
+                                                                                                                                COVID-19 Alerte consomme très peu d'énergie grâce à l'utilisation du GPS Low Energy (BLE)
+                                                                                                                                Cette technique consomme dix fois moins d'énergie que le GPS classique.
+                                                                                                                            </p><br /><br />
+    <h5>Combien de données mobiles et Wifi consomme COVID-19 Alerte?</h5><br />
+     <p>COVID-19 Alerte utilise internet pour envoyer les identifiants temporaires et l'heure de vos derniers contacts.</p>
+     <p>Internet est utilisée pour charger le message affiché sur l'écran d'accueil</p>
+     <p>Ces données sont des types textuels uniquement. Nous estimons que ces données ne dépassent pas 1 Mo par jour</p><br /><br />
+    
+        <h5>Est-ce que COVID-19 Alerte affecte ou sera affectée si je connecte d'autres appareils GPS avec mon smartphone ? (écouteurs Bluetooth, montres connectées …)</h5><br />
+
+
+      <p>Une fois l'application COVID-19 Alerte fonctionnelle, il n'y a pas d'interférences avec les autres applications et appareils utilisant le GPS de votre Smartphone. Tout continue à fonctionner normalement.</p>
+    <br /><br />
+          <h5>Que se passe-t-il si je supprime l'application ou si je change de téléphone ?</h5><br />
+     <p>Si vous supprimez l'application COVID-19 Alerte, vos données ne seront plus mis à jour. Les contacts survenus ne seront plus capturés.</p>
+     <p>Si par malheur l'un de vos contacts directs ou indirects soit infecté, vous ne ne seriez pas notifié.</p>
+     <p>Si vous changez de téléphone, il suffit d'installer COVID-19 Alerte sur votre nouvel appareil, de s'y connecter avec votre numéro de téléphone.</p><br /><br />
+     <h5>Pourquoi est que je dois mettre mon numéro de téléphone ?</h5><br />
+     <p>Votre numéro de téléphone est nécessaire afin que les équipes de santé prennent contact avec vous en cas de risque d'infection pour vous prendre en charge avant même l'apparition des symptômes.</p>
+    <br /><br />
+    <h5>En cas d'infection mon identité sera-t-elle révélée ? </h5><br />
+     <p>Votre identité ne sera jamais révélée pour les autres utilisateurs même en cas d'infection. </p> <br /><br />
+    <h5>Pourquoi COVID-19 Alerte a-t-elle besoin de l'autorisation de localisation sur Android?</h5><br />
+      <p>Sur Android, des nouvelles mises à jour de sécurité ont été ajoutées. Ce qui impose l'activation de la localisation pour que deux appareils GPS puissent se reconnaître et échanger des informations sans être pairés.</p>
+<br /><br />
+      <h5>Comment mes données sont-elles protégées ?</h5> <br />
+<p>Les données collectées à un jour donné seront conservées pendant 14 jours uniquement. Elles seront détruites automatiquement dès la première heure de la 15ème journée.</p>
+<p>Toutes les communications avec les serveurs sont cryptées et authentifiées grâce au protocol HTTPS.</p>
+<p>L'authentification des utilisateurs passe via un token signé par l'algorithme RS256.</p>
+<p>Les numéros de téléphones sont cryptés au niveau de la base de données.</p>
+<p>Tout accès/décryptage de ces informations par le personnel médical est journalisé.</p> <br /> <br />
+   <h5>Quelles sont les données collectées par COVID-19 Alerte ?</h5><br /> <br />
+    <h6>Les données collectées sont les suivantes :</h6>
+    <p>Le numéro de téléphone ;</p>
+    <p>Les identifiants des autres utilisateurs de l'application avec qui vous êtes entrés en contact, les identifiants des utilisateurs changent régulièrement.</p>
+    <p>Date du contact ;</p>
+    <p>Nous utilisons la localisation pour identifier un contact entre deux appareils, uniquement lorsque ces conditions sont valides simultanément:</p>
+    <p>Le système d'exploitation, des deux appareils, est iOS ;</p>
+    <p>L'application est en arrière plan ;</p>
+    <p>Les deux appareils se trouvent dans une condition de contact (à quelques mètres);</p>
+    <p>Les données de localisation sont utilisées pour identifier le contact et sont supprimées automatiquement par la suite.</p>
+    <p>Aucune donnée personnelle ne sera partagée avec les autres utilisateurs. </p><br /> <br />
+   <h5>A combien de mètres de distance l'application COVID-19 Alerte enregistre un contact avec un autre appareil connecté ?</h5> <br />
+    <p>L'application COVID-19 Alerte enregistre les identifiants des utilisateurs qui sont à un rayon de 3 mètres environ.</p><br /><br />
+     <h5>Que veut dire le message " Vous n'avez pas été en contact avec une personne testée positive au Covid-19" ?</h5><br />
+   <p>>Ce message indique qu'au niveau de nos bases de données, aucun de vos contacts directs n'a pas été testé positif au COVID-19 pendant les 14 derniers jours.</p><br /><br />
+   <h5>Que veut dire le message " Vous avez été récemment en contact avec une personne testée positive au Covid-19" ?</h5><br />
+    <p>Ce message indique qu'au niveau de nos bases de données, l'un ou plusieurs de vos contacts directs a été testé positif au COVID-19 pendant les 14 derniers jours.</p>
+    <p>Dans ce cas vous devez vous auto-isoler. Vous serez contacté par le personnel médical pour être testé.</p><br /><br />
+    <h5>Que veut dire le message " Vous avez été en contact avec une personne dont son entourage a été testé positif au Covid-19" ?</h5><br />
+ <p>Ce message indique qu'au niveau de nos bases de données, l'un ou plusieurs de vos contacts directs a été en contact avec une personne testée positive au COVID-19 pendant les 14 derniers jours.</p>
+ <p>Dans ce cas vous devez vous auto-isoler en attendant une mise à jour. Si la personne qui a été en contact direct avec la personne infectée a été testée positive, vous serez contacté par le personnel médical, sinon, votre statut reviendra à la normale.</p>
+        <br /><br />
+              <h5>A quelle fréquence le message affiché dans l'application est mis à jour ?</h5><br />
+                                                                                                <p>Le message est mis à jour chaque 24 heures.</p><br /><br />
+
+    </div>
+    <p>© 2020 Pragmatic</p>
+</div>

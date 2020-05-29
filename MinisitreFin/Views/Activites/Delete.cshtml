@@ -1,0 +1,73 @@
+﻿@model MinisitreFin.Models.Activites
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Activites</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_activ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_activ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Objectif_activ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objectif_activ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.statu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.statu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type_Activite.Nom_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type_Activite.Nom_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Agenda.Nom_agenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agenda.Nom_agenda)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

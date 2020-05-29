@@ -1,0 +1,77 @@
+﻿@model MinisitreFin.Models.Activites
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+<h2>Details</h2>
+
+<div>
+    <h4>Activite</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nom 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_activ)
+        </dd>
+
+        <dt>
+            Objectif
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objectif_activ)
+        </dd>
+
+        <dt>
+            Date
+        </dt>
+
+        <dd>
+            
+            @Html.FormatValue("yyy-MM-dd", Model.Date.Value.Date.ToString("yyy-MM-dd"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.statu)
+        </dt>
+
+        <dd>
+            @if (Model.statu.Value)
+            {
+                <h6 class="text-success">Validé</h6>
+            }
+            else
+            {
+                <h6 class="text-warning">en coure de validation ...</h6>
+            }
+        </dd>
+
+        <dt>
+            Type D'activite
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type_Activite.Nom_type)
+        </dd>
+
+        <dt>
+            Agenda
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agenda.Nom_agenda)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Retour à la liste", "GroupeActivites",new { idgroupe = ViewData["idgroupe"], IDCreate = ViewData["IDCreate"] })
+</p>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    
+</p>*@

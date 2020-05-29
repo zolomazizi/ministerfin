@@ -1,0 +1,186 @@
+﻿@model MinisitreFin.Models.Examens
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Examens</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PatientId, "PatientId", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Patient.Nom, new { htmlAttributes = new { @class = "form-control" } })
+            @*@Html.DropDownList("PatientId", null, htmlAttributes: new { @class = "form-control" })*@
+            @Html.ValidationMessageFor(model => model.PatientId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">Q1 : Voyage ou dans une Zone à Risque </label>
+        @*@Html.LabelFor(model => model.A, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+
+            @Html.EditorFor(model => model.A, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.A, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.A_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.A_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q1- B : Contact avec un malade confirmé : </label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.B, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.B, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.B_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.B_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q3 : Est-ce que vous toussez ?  </label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.C, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.C, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.C_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.C_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q4 : Ressentez-vous de la Fièvre : </label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.D, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.D, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.D_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.D_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q5 : Céphalées et Migraines</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.E, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.E, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.E_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.E_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q6 : Souffrez-vous de diarrhée ou de Vomissements?</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.F, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.F, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.F_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.F_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q7 : Souffrez-vous de maladies chroniques ou de Co morbidité ?(Ex : Diabète, hypertension, Maladies cardio-vasculaires) </label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.G, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.G, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.G_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.G_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q8– A : Prenez vous des médicaments?  </label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.H, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.H, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.H_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.H_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q9 – B Souffrez-vous d’une Conjonctivite ? </label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.I, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.I, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.I_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.I_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label ">•	Q10 – C : Eprouvez vous de la Fatigue?</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.J, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.J, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.J_Text, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.J_Text, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Statut, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Statut, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Statut, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ordonnance_, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ordonnance_, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

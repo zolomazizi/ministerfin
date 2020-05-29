@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MinisitreFin.Models.Examens>
+
+@{
+    ViewBag.Title = "ExamenPatient";
+    Layout = "~/Views/Shared/_dashboardAdmin.cshtml";
+}
+
+<h2>ExamenPatient</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Nom
+        </th>
+        <th>
+            Prenom
+        </th>
+        <th>
+            CIN
+        </th>
+        <th>
+            Telephone
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Statut)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.Prenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.cin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.tele)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Statut)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+
+        </td>
+    </tr>
+}
+
+</table>
